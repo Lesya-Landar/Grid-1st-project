@@ -1,5 +1,5 @@
 .skills {
-  @include sm-min {
+    @include sm-min {
   padding: ($gap / 2) ($gap / 2) ($gap * 2) ($gap / 2);
   }
   @include sm {
@@ -67,7 +67,7 @@
 }
 
 .skill-item {
-  min-height: calc(33.33vh - 12px);
+  min-height: 350px;
   background-color: $color-primary;
   position: relative;
   overflow: hidden;

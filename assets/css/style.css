@@ -523,15 +523,16 @@ a {
 
 .header {
   position: relative;
-  min-height: 100vh;
-  background-image: url(../scss/img/header-block.png);
-  background-size: cover;
-  background-position: 50% 50%;
+  min-height: 111.5vh;
+  padding-bottom: 104px;
   display: grid;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   color: #ffffff;
+  background-color: #2d3651;
+  background-position: 50% 50%;
+  background-size: cover;
 }
 
 .header-content {
@@ -540,6 +541,7 @@ a {
 
 .header-content__title {
   text-align: center;
+  padding-top: 109px;
 }
 
 .header-content__buttons {
@@ -559,7 +561,7 @@ a {
 }
 
 .header-logo__link {
-  padding: 20px 20px 20px 0;
+  padding: 20px 20px 20px 0px;
   display: block;
 }
 
@@ -567,7 +569,7 @@ a {
   display: inline-block;
   padding: 14px 1px 13px 5px;
   border: 3px solid #d53d27;
-  margin-left: 4px;
+  margin-right: 4px;
 }
 
 .header-menu {
@@ -589,6 +591,7 @@ a {
       -ms-flex-align: center;
           align-items: center;
   justify-items: end;
+  margin-right: -21px;
 }
 
 .header-navbar__list {
@@ -615,7 +618,6 @@ a {
 }
 
 .header-navbar__hamburger {
-  display: none;
   width: 30px;
   height: 22.5px;
   position: relative;
@@ -683,13 +685,72 @@ a {
 }
 
 .header-overlay {
-  background-color: #2d3651;
   opacity: 0.8;
+  background-color: #2d3651;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+}
+
+.about-item__image {
+  background-size: cover;
+  width: 100%;
+  height: 652px;
+}
+
+.form {
+  height: 120px;
+  color: #ffffff;
+  background-color: #2d3651;
+  position: absolute;
+  width: 100%;
+}
+
+.form__btn-container {
+  position: relative;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.btn-form {
+  height: 60px;
+  min-width: 420.5px;
+  background-color: #38405A;
+  border: none;
+  text-align: left;
+  margin-left: 16px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.125rem;
+  color: #ffffff;
+  letter-spacing: 0.08em;
+  padding-left: 30px;
+}
+
+.btn-form:nth-child(1)::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.btn-form:nth-child(1)::-moz-placeholder {
+  color: #ffffff;
+}
+
+.btn-form:nth-child(1):-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.btn-form:nth-child(1)::-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.btn-form:nth-child(1)::placeholder {
+  color: #ffffff;
+}
+
+.btn-form:nth-child(3) {
+  background-color: #424B63;
+  text-align: center;
 }
 
 .skills__container {
@@ -707,7 +768,7 @@ a {
 }
 
 .skill-item {
-  min-height: calc(33.33vh - 12px);
+  min-height: 350px;
   background-color: #2d3651;
   position: relative;
   overflow: hidden;

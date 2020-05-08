@@ -1,0 +1,42 @@
+.form {
+height: 120px;
+color: $color-light;
+background-color: $color-primary;
+position: absolute;
+width: 100%;
+}
+
+.form__btn-container {
+    position: relative;
+    text-align: center;
+    margin-top: 30px;
+    
+}
+
+.btn-form {
+    height: 60px;
+    min-width: 420.5px;
+    background-color: #38405A;
+    border: none;
+    text-align: left;
+    margin-left: 16px;
+    font-family: $font-main;
+    font-size: 1.125rem;
+    color: $color-light;
+    letter-spacing: 0.08em;
+    padding-left: 30px;
+
+    &:nth-child(1)::placeholder {
+        color: $color-light;  
+    }
+
+
+   &:nth-child(3) {
+    background-color: #424B63;
+    text-align: center;
+    
+}
+}
+// .btn-form::placeholder {
+//     color: $color-light;
+// }

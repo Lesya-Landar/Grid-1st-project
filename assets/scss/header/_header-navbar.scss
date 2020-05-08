@@ -2,15 +2,17 @@
   display: grid;
   align-items: center;
   justify-items: end;
+  margin-right: -21px;
 
   &__list {
-    @include unlist (0 (-$gap) 0 0);
+    @include unlist (0 0 (-$gap) 0);
 
     @include md-min {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
       width: 100%;
       justify-content: end;
+  
     }
 
     @include md {
@@ -40,7 +42,7 @@
 }
 
 .header-navbar__hamburger {
-  display: none;
+  // display: none;
   width: 30px;
   height: 22.5px;
   position: relative;

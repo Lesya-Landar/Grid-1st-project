@@ -6,13 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700|Roboto:100,300,400,500,700,900">
+  <link rel="stylesheet" href="libs/@fortawesome/fontawesome-free/css/all.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
 
 <body>
 
-  <header class="header">
-    <div class="header-overlay"></div>
+  <header class="header" style="background-image: url(assets/scss/img/header-block.png);">
+    <div class="header-overlay" style="opacity: 0.8; background-color: #2D3651;"></div>
 
     <div class="header-menu">
       <div class="header-menu__container">
@@ -57,7 +60,7 @@
   <section class="skills">
     <div class="skills__container">
       <div class="skill-item">
-        <div class="skill-item__overlay" style="background-color: #2D3651; opacity: 0.8;"></div>
+        <div class="skill-item__overlay" style="opacity: 0.8; background-color: #2D3651;"></div>
         <div class="skill-item__image" style="background-image: url(assets/scss/img/img-html.png);"></div>
         <h3 class="skill-item__title"><a href="#" class="skill-item__link">HTML</a></h3>
       </div>
@@ -106,6 +109,18 @@
       <a href="#" class="btn-accent">View all skills...</a>
     </div>
   </section>
+  <section class="about">
+    <div class="about-item__image" style="background-image: url(assets/scss/img/section-you-are-ready.png);"></div>
+  </section>
+  <section class="form">
+    <div class="form__btn-container">
+  <form action="register.php" method="get">
+    <label><input class="btn-form" required type="text" name="name" placeholder="Your name..."></label>
+    <label><input class="btn-form" required type="email" name="email" placeholder="Your email..."></label>
+    <button class="btn-form" type="submit">Subscribe</button>
+  </form>
+  </div>
+</section>
 
   
   <script src="libs/jquery/dist/jquery.js"></script>
