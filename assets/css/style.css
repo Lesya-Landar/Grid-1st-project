@@ -503,6 +503,16 @@ h1 {
   line-height: 1.2em;
 }
 
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 2.5rem;
+  color: #2d3651;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  line-height: 1.2em;
+  padding-bottom: 20px;
+}
+
 a {
   text-decoration: none;
   color: #ffffff;
@@ -753,6 +763,69 @@ a {
   text-align: center;
 }
 
+.posts {
+  display: block;
+  padding-bottom: 100px;
+  padding-top: 90px;
+  margin-top: 100px;
+}
+
+.posts__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.posts__container {
+  max-width: 1340px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: block;
+  margin: auto;
+}
+
+.posts__grid {
+  display: grid;
+  padding-bottom: 20px;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "b1 b1 b2 b3" "b4 b5 b6 b6";
+}
+
+.posts-item {
+  min-height: 550px;
+}
+
+.posts-item:nth-of-type(1) {
+  grid-area: b1;
+}
+
+.posts-item:nth-of-type(2) {
+  grid-area: b2;
+}
+
+.posts-item:nth-of-type(3) {
+  grid-area: b3;
+}
+
+.posts-item:nth-of-type(4) {
+  grid-area: b4;
+}
+
+.posts-item:nth-of-type(5) {
+  grid-area: b5;
+}
+
+.posts-item:nth-of-type(6) {
+  grid-area: b6;
+}
+
 .skills__container {
   display: grid;
   padding-bottom: 20px;
@@ -885,6 +958,23 @@ a {
 
 .skill-item:hover .skill-item__link {
   color: #d66926;
+}
+
+.footer {
+  text-align: center;
+}
+
+.footer__social {
+  padding: 50px 20px 0 20px;
+  font-size: 2.1rem;
+  margin-bottom: 60px;
+}
+
+.footer__container {
+  display: block;
+  min-height: 250px;
+  width: auto;
+  background-color: #2d3651;
 }
 
 @media (min-width: 576px) {
