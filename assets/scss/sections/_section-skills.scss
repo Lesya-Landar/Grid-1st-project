@@ -1,6 +1,6 @@
 .skills {
     @include sm-min {
-  padding: ($gap / 2) ($gap / 2) ($gap * 2) ($gap / 2);
+  padding: ($gap / 2) ($gap / 4) ($gap * 2) ($gap / 4);
   }
   @include sm {
     padding: $gap;
