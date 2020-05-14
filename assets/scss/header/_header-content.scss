@@ -21,6 +21,8 @@
   &__buttons {
     display: flex;
     justify-content: center;
+    padding-left: 2px;
+    padding-bottom: 5px;
   
     @include sm-min {
       .btn:first-of-type {

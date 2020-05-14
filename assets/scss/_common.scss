@@ -8,6 +8,7 @@ html {
   letter-spacing: 0.1em;
   overflow-y: scroll;
   color: $color-gray;
+
 }
 
 h1 {
@@ -35,9 +36,17 @@ h2 {
   font-size: 2.5rem;
   color: $color-primary;
   font-weight: bold;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.115em;
   line-height: 1.2em;
-  padding-bottom: 20px;
+  margin-top: 0;
+  margin-bottom: 56px;
+  padding-left: 2px;
+}
+
+h3 {
+  letter-spacing: 0.05em;
+  font-size: 1.125rem;
+  color: $color-gray; 
 }
 
 
@@ -79,7 +88,7 @@ a {
   border: 2px solid $color-primary;
   min-width: 350px;
   height: 60px;
-  padding: 20px $gap;
+  padding: 18px $gap;
   font-size: 1.125rem;
 
 

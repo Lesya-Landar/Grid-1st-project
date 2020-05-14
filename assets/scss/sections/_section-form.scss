@@ -1,42 +1,80 @@
 .form {
-height: 120px;
-color: $color-light;
+    display: block;
+// height: 120px;
 background-color: $color-primary;
-position: absolute;
-width: 100%;
+padding-top: 30px;
+padding-bottom: 30px;
 }
 
 .form__btn-container {
-    position: relative;
-    text-align: center;
-    margin-top: 30px;
-    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    max-width: 1340px;
+    margin: auto; 
+    padding-left: 20px; 
+    padding-right: 20px;
 }
 
-.btn-form {
+.form-item__input {
     height: 60px;
-    min-width: 420.5px;
-    background-color: #38405A;
-    border: none;
-    text-align: left;
-    margin-left: 16px;
-    font-family: $font-main;
-    font-size: 1.125rem;
-    color: $color-light;
-    letter-spacing: 0.08em;
+    width: 100%; 
     padding-left: 30px;
+    padding-right: 30px;
+    color: $color-light;
+    background-color: rgba(255, 255, 255, 0.05);
+    letter-spacing: 0.1em;
+    border: 2px solid rgba(255, 255, 255, 0);
+    border-bottom-color: rgba(255, 255, 255, 0.25);
+    font-size: 1.125rem;
+    transition: background-color 0.5s, border-color 0.5s;
 
-    &:nth-child(1)::placeholder {
-        color: $color-light;  
+    &:hover {
+        border-color: rgba(255, 255, 255, 0.15);
+        border-bottom-color: $color-light;
+        background-color: rgba(255, 255, 255, 0.15);
     }
+}
 
 
-   &:nth-child(3) {
-    background-color: #424B63;
-    text-align: center;
+.form .btn-accent {
+    color: $color-light;
+    border: 2px solid rgba(255, 255, 255, 0);
+    border-bottom-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
+
+    &:hover {
+        cursor: pointer;
+        border-color: $color-light;
+        background-color: $color-accent;
+    }
+}
+
+// .btn-form {
+//     height: 60px;
+//     min-width: 420.5px;
+//     background-color: #38405A;
+//     border: none;
+//     text-align: left;
+//     margin-left: 16px;
+//     // margin-right: 10px;
+//     font-family: $font-main;
+//     font-size: 1.125rem;
+//     color: $color-light;
+//     letter-spacing: 0.08em;
+//     padding-left: 30px;
+
+//     &:nth-child(1)::placeholder {
+//         color: $color-light;  
+//     }
+
+
+//    &:nth-child(3) {
+//     background-color: #424B63;
+//     text-align: center;
     
-}
-}
+// }
+// }
 // .btn-form::placeholder {
 //     color: $color-light;
 // }

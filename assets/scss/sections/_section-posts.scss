@@ -1,8 +1,10 @@
 .posts {
     display: block;
     padding-bottom: 100px;
-    padding-top: 90px;
-    margin-top: 100px;
+    padding-top: 102px;
+    padding-right: 4px;
+    // margin-top: 15px;
+    // margin-right: 5px;
 }
 
 .posts__button {
@@ -30,9 +32,38 @@ margin: auto;
     "b4 b5 b6 b6";
 }
 
+.posts-item__link {
+  display: grid;
+  height: 100%;
+  grid-template-rows: 300px 1fr;
+  overflow: hidden;
+}
+
+.posts-item__content {
+  display: grid;
+  align-content: center;
+  padding: 20px;
+
+  h3 {
+  transition: color 0.5s;
+  text-align: center;
+  font-family: $font-header;
+  font-weight: bold;
+  }
+
+  p {
+    text-align: center;
+    transition: 0.5s;
+    color: $color-gray;
+  }
+}
+
 
 .posts-item {
-    min-height: 550px;
+    max-height: 550px;
+    transition: background-color 0.5s;
+    background-color: #f2f2f2;
+  
 
 &:nth-of-type(1) {
     grid-area: b1;
@@ -57,5 +88,9 @@ margin: auto;
   &:nth-of-type(6) {
     grid-area: b6;
   }
+}
+
+.posts__button a {
+padding-right: 12px;
 }
 

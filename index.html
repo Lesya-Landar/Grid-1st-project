@@ -126,8 +126,7 @@
           maiores. Voluptas dolor quidem tempora illum laboriosam dolorum neque tenetur.</p>
         <p>Alias voluptates commodi eligendi perspiciatis non ipsam numquam, perferendis fugiat amet molestias provident
           unde, deleniti quo ducimus placeat voluptas! Quos amet, aliquam, reiciendis porro eos voluptates maiores.</p>
-        <p>Culpa consequatur labore, adipisci asperiores impedit tenetur quam ab dicta recusandae quas nobis reprehenderit
-          necessitatibus placeat corporis enim aliquid sequi saepe.</p>
+          
       </div>
       <div class="about__img"><img src="assets/scss/img/img-lamp-webdev.png" alt="img about"></div>
     </div>
@@ -135,13 +134,11 @@
 
 
   <section class="form">
-    <div class="form__btn-container">
-  <form action="register.php" method="get">
-    <label><input class="btn-form" required type="text" name="name" placeholder="Your name..."></label>
-    <label><input class="btn-form" required type="email" name="email" placeholder="Your email..."></label>
-    <button class="btn-form" type="submit">Subscribe</button>
+    <form class="form__btn-container" action="#">
+    <div class="form-item"><input class="form-item__input" required type="text" name="name" placeholder="Your name..."></div>
+    <div class="form-item"><input class="form-item__input" required type="email" name="email" placeholder="Your email..."></div>
+    <button class="btn-accent" type="submit">Subscribe</button>
   </form>
-  </div>
 </section>
 
 <section class="posts">
@@ -220,8 +217,8 @@
     <a href=""><i class="fab fa-flickr"></i></a>
   </div>
   <div class="footer__content">
-    <div>WE ARE REAL</div>
-    <div>WEB-DEVELOPERS</div>
+    <div class="footer__content__first">WE ARE REAL</div>
+    <div class="footer__content__second">WEB-DEVELOPERS</div>
   </div>
 </div>
 </footer>
