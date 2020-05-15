@@ -3,38 +3,67 @@
     padding-bottom: 100px;
     padding-top: 102px;
     padding-right: 4px;
-    // margin-top: 15px;
-    // margin-right: 5px;
-}
 
-.posts__button {
+
+&__button {
     display: flex; 
     justify-content: center;
     align-items: center;
 }
 
 
-.posts__container {
-max-width: $ul;
-padding-left: $gap;
-padding-right: $gap;
-display: block;
-margin: auto;
+&__container {
+@extend %container;
 }
 
-.posts__grid {
+&__grid {
     display: grid;
     padding-bottom: $gap;
-    grid-gap: $gap;
+
+    @include lg-min {
+    // grid-gap: $gap;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: 
     "b1 b1 b2 b3"
     "b4 b5 b6 b6";
+    grid-gap: $gap;
+}
+
+@include lg-md {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: 
+  "b1 b1 b2"
+  "b3 b4 b4"
+  "b5 b5 b6";
+  grid-gap: $gap / 2;
+}
+
+@include md-sm {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: 
+  "b1 b2"
+  "b3 b4"
+  "b5 b6";
+  grid-gap: $gap / 2;
+}
+
+@include sm {
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+  "b1"
+  "b2"
+  "b3"
+  "b4"
+  "b5"
+  "b6";
+  grid-gap: $gap;
+}
+}
 }
 
 .posts-item__link {
   display: grid;
-  height: 100%;
+  min-height: 550px;
   grid-template-rows: 300px 1fr;
   overflow: hidden;
 }
@@ -42,28 +71,54 @@ margin: auto;
 .posts-item__content {
   display: grid;
   align-content: center;
-  padding: 20px;
+  padding: 5px 25px 5px 25px;
+  overflow: hidden;
+  
 
   h3 {
   transition: color 0.5s;
   text-align: center;
   font-family: $font-header;
   font-weight: bold;
+  letter-spacing: 0.05em;
   }
 
   p {
     text-align: center;
-    transition: 0.5s;
+    transition: color 0.5s;
     color: $color-gray;
+    letter-spacing: 0em;
   }
 }
 
 
+
+.posts-item__img {
+  display: flex;
+  overflow: hidden;
+  align-content: center;
+  justify-content: center;
+
+
+ img {
+  width: 100%;
+  transition: transform 0.5s;
+  object-fit: cover;
+}
+}
+
 .posts-item {
-    max-height: 550px;
-    transition: background-color 0.5s;
-    background-color: #f2f2f2;
-  
+  max-height: 550px;
+  transition: background-color 0.5s;
+  background-color: #f2f2f2;
+
+  &:hover {
+    background-color: #d8d8d8;
+
+    .posts-item__img img {
+      transform: scale(1.1);
+    }
+  }
 
 &:nth-of-type(1) {
     grid-area: b1;
@@ -88,6 +143,8 @@ margin: auto;
   &:nth-of-type(6) {
     grid-area: b6;
   }
+
+  
 }
 
 .posts__button a {
