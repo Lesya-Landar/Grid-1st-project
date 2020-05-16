@@ -5,14 +5,13 @@
   margin-right: -21px;
 
   &__list {
-    @include unlist (0 0 (-$gap) 0);
+    @include unlist(0 0 (-$gap) 0);
 
     @include md-min {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
       width: 100%;
       justify-content: end;
-  
     }
 
     @include md {
@@ -22,12 +21,12 @@
       right: $gap;
       text-align: right;
       background-color: rgba($color-gray-dark, 0.9);
-  }
+    }
 
-  &.active {
-    display: block;
+    &.active {
+      display: block;
+    }
   }
-}
 
   &__link {
     display: block;
@@ -45,7 +44,7 @@
   width: 30px;
   height: 22.5px;
   position: relative;
-  margin-right: 20px;
+  margin-right: $gap;
   transform: rotate(0deg);
   transition: 0.5s ease-in-out;
   cursor: pointer;
@@ -56,7 +55,7 @@
 
   @include md {
     display: block;
-    }
+  }
 
   span {
     display: block;

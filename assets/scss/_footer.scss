@@ -6,12 +6,11 @@
 .footer__container {
     display: block;
     min-height: 250px;
-    width: auto;  
+    width: auto;
 }
 
-
 .footer__social {
-    padding: 48px 20px 0 20px;
+    padding: 48px $gap 0 $gap;
     font-size: 2.1rem;
     margin-bottom: 60px;
     position: relative;
@@ -36,23 +35,17 @@
     }
 }
 
-
-
 .footer__content {
-  letter-spacing: 0.3em; 
-  line-height: 1.3em;
+    letter-spacing: 0.3em;
+    line-height: 1.3em;
 
-  &__first {
-   margin-right: -0.3em;
-  }
+    &__first {
+        margin-right: -0.3em;
+    }
 
-  
-  
-  &__second {
-      font-weight: bold;
-      color: $color-light;
-      letter-spacing: 0.05em; 
-    
-  }
+    &__second {
+        font-weight: bold;
+        color: $color-light;
+        letter-spacing: 0.05em;
+    }
 }
-

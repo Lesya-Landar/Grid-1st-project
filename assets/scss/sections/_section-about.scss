@@ -36,7 +36,10 @@
     color: $color-gray;
     line-height: 1.3em;
     margin-bottom: 1.05em;
-    margin-block-end: 1.06em;
+
+    @include md {
+        font-size: 1rem;
+      }
     
 
     &:first-of-type {

@@ -8,7 +8,6 @@ html {
   letter-spacing: 0.1em;
   overflow-y: scroll;
   color: $color-gray;
-
 }
 
 h1 {
@@ -32,23 +31,34 @@ h1 {
 }
 
 h2 {
-  font-family: $font-main;
+  font-family: $font-header;
   font-size: 2.5rem;
   color: $color-primary;
   font-weight: bold;
-  letter-spacing: 0.115em;
+  letter-spacing: 0.1em;
   line-height: 1.2em;
   margin-top: 0;
   margin-bottom: 56px;
-  padding-left: 2px;
+
+
+  @include lg-md {
+    font-size: 2rem;
+  }
+
+  @include md {
+    font-size: 1.5rem;
+  }
+
+  @include sm {
+    text-align: center;
+  }
 }
 
 h3 {
   letter-spacing: 0.05em;
   font-size: 1.125rem;
-  color: $color-gray; 
+  color: $color-gray;
 }
-
 
 a {
   text-decoration: none;
@@ -92,8 +102,6 @@ a {
   padding: 18px $gap;
   font-size: 1.125rem;
 
-
-
   @extend %btn-common;
 
   @include sm-min {
@@ -103,5 +111,4 @@ a {
   @include sm {
     width: 100%;
   }
-
 }
