@@ -86,6 +86,10 @@ padding-bottom: 20px;
             color: lighten($color-gray, 15%);
           }
     }
+
+    &:focus {
+        color: $color-light;
+    }
 }
 
 

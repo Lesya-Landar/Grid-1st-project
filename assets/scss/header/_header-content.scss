@@ -1,13 +1,16 @@
 .header-content {
   position: relative;
+  
 
   &__container {
+    display: grid;
     @extend %container;
+    max-height: 189px;
   }
 
   &__title {
     text-align: center;
-    padding-top: 109px;
+    padding-top: 53px;
 
     @include lg-min {
       margin: 0 0 53px;
