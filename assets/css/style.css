@@ -500,9 +500,9 @@ html {
 h1 {
   font-family: "Roboto Slab", serif;
   font-weight: 300;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.078em;
   line-height: 1.2em;
-  padding-right: 4px;
+  padding-right: 11px;
 }
 
 h2 {
@@ -520,6 +520,7 @@ h3 {
   letter-spacing: 0.05em;
   font-size: 1.125rem;
   color: #637588;
+  padding-right: 10px;
 }
 
 a {
@@ -538,8 +539,9 @@ a {
   border: 2px solid #2d3651;
   min-width: 350px;
   height: 60px;
-  padding: 18px 20px;
+  padding: 18px 20px 19px 20px;
   font-size: 1.125rem;
+  margin-right: 13px;
 }
 
 .header {
@@ -551,8 +553,7 @@ a {
       align-content: center;
   color: #ffffff;
   background-color: #2d3651;
-  background-position: 50% 50%;
-  background-size: cover;
+  background-position: 87% 50%;
 }
 
 .header-content {
@@ -566,7 +567,7 @@ a {
 
 .header-content__title {
   text-align: center;
-  padding-top: 53px;
+  padding-top: 52px;
 }
 
 .header-content__buttons {
@@ -576,8 +577,7 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-left: 2px;
-  padding-bottom: 5px;
+  padding-right: 10px;
 }
 
 .header-logo {
@@ -585,6 +585,7 @@ a {
       align-self: center;
   letter-spacing: 0.22em;
   font-size: 1.5rem;
+  margin-left: -6px;
 }
 
 .header-logo__link {
@@ -618,7 +619,7 @@ a {
       -ms-flex-align: center;
           align-items: center;
   justify-items: end;
-  margin-right: -21px;
+  margin-right: -15px;
 }
 
 .header-navbar__list {
@@ -731,8 +732,8 @@ a {
 .about__container {
   max-width: 1340px;
   margin: auto;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding-right: 25px;
+  padding-left: 14px;
   display: grid;
   grid-template-columns: 1fr 270px;
   grid-gap: 100px;
@@ -785,14 +786,13 @@ a {
 }
 
 .form-item-email input {
-  padding-left: 32.5px;
+  padding-left: 26px;
 }
 
 .form-item__input {
   height: 60px;
   width: 100%;
-  padding-left: 29px;
-  padding-right: 20px;
+  padding: 5px 30px 0px 20px;
   color: #4d6d88;
   background-color: rgba(255, 255, 255, 0.05);
   letter-spacing: 0.1em;
@@ -870,8 +870,8 @@ a {
 .posts {
   display: block;
   padding-bottom: 100px;
-  padding-top: 102px;
-  padding-right: 4px;
+  padding-top: 104px;
+  padding-right: 12px;
 }
 
 .posts__button {
@@ -889,6 +889,7 @@ a {
 .posts__grid {
   display: grid;
   padding-bottom: 20px;
+  grid-gap: 20px;
 }
 
 .posts-item__link {
@@ -954,6 +955,8 @@ a {
   -o-transition: background-color 0.5s;
   transition: background-color 0.5s;
   background-color: #f2f2f2;
+  overflow: hidden;
+  overflow-y: auto;
 }
 
 .posts-item:hover {
@@ -994,6 +997,10 @@ a {
   padding-right: 12px;
 }
 
+.posts__button .btn-accent {
+  margin-right: 4px;
+}
+
 .skills__container {
   display: grid;
   padding-bottom: 20px;
@@ -1009,10 +1016,15 @@ a {
 }
 
 .skill-item {
-  min-height: 350px;
+  display: grid;
   background-color: #2d3651;
   position: relative;
   overflow: hidden;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  justify-items: center;
 }
 
 .skill-item__overlay {
@@ -1140,9 +1152,11 @@ a {
 }
 
 .footer__social {
-  padding: 48px 20px 0 20px;
-  font-size: 2.1rem;
-  margin-bottom: 60px;
+  padding: 46px 20px 0 20px;
+  font-size: 2.17rem;
+  letter-spacing: 0.01em;
+  margin-bottom: 58px;
+  margin-right: 15px;
   position: relative;
 }
 
@@ -1152,12 +1166,12 @@ a {
   height: 2px;
   content: "";
   background-color: rgba(255, 255, 255, 0.1);
-  bottom: -29px;
+  bottom: -28px;
   left: calc(50% - 75px / 2);
 }
 
 .footer__social a {
-  padding: 4.5px;
+  padding: 5px 5px 5px 5px;
   -webkit-transition: color 0.5s;
   -o-transition: color 0.5s;
   transition: color 0.5s;
@@ -1168,18 +1182,16 @@ a {
 }
 
 .footer__content {
-  letter-spacing: 0.3em;
-  line-height: 1.3em;
-}
-
-.footer__content__first {
-  margin-right: -0.3em;
+  letter-spacing: 0.28em;
+  line-height: 1.2em;
+  margin-right: 8px;
 }
 
 .footer__content__second {
   font-weight: bold;
   color: #ffffff;
   letter-spacing: 0.05em;
+  margin-right: 2.5px;
 }
 
 @media (min-width: 576px) {
@@ -1190,7 +1202,13 @@ a {
     margin-right: 20px;
   }
   .skills {
-    padding: 10px 4px 40px 5px;
+    padding: 10px 10px 40px 10px;
+  }
+}
+
+@media (min-height: 691px) {
+  .skill-item {
+    min-height: calc(33.33vh - 20px * 0.66);
   }
 }
 
@@ -1231,7 +1249,6 @@ a {
   .posts__grid {
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: "b1 b1 b2 b3" "b4 b5 b6 b6";
-    grid-gap: 20px;
   }
   .skills__container {
     grid-template-columns: repeat(4, 1fr);
@@ -1265,7 +1282,6 @@ a {
   .posts__grid {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "b1 b1 b2" "b3 b4 b4" "b5 b5 b6";
-    grid-gap: 10px;
   }
   .skills__container {
     grid-template-columns: repeat(3, 1fr);
@@ -1317,12 +1333,17 @@ a {
   .posts__grid {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "b1 b2" "b3 b4" "b5 b6";
-    grid-gap: 10px;
   }
   .skills__container {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9";
     grid-gap: 10px;
+  }
+}
+
+@media (max-height: 690px) {
+  .skill-item {
+    min-height: calc(230px - 20px * 0.66);
   }
 }
 
@@ -1378,7 +1399,6 @@ a {
   .posts__grid {
     grid-template-columns: 1fr;
     grid-template-areas: "b1" "b2" "b3" "b4" "b5" "b6";
-    grid-gap: 20px;
   }
   .skills {
     padding: 20px;

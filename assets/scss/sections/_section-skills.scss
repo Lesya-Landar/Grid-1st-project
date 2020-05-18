@@ -1,6 +1,6 @@
 .skills {
     @include sm-min {
-  padding: ($gap / 2) 4px ($gap * 2) ($gap / 4);
+  padding: ($gap / 2) ($gap / 2) ($gap * 2) ($gap / 2);
   }
   @include sm {
     padding: $gap;
@@ -67,10 +67,21 @@
 }
 
 .skill-item {
-  min-height: 350px;
+  display: grid;
   background-color: $color-primary;
   position: relative;
   overflow: hidden;
+  align-items: center;
+  padding: $gap;
+  justify-items: center;
+
+  @media (min-height: 691px) {
+    min-height: calc(33.33vh - #{$gap} * 0.66);
+  }
+
+  @media (max-height: 690px) {
+    min-height: calc(230px - #{$gap} * 0.66);
+  }
 
   &__overlay {
     position: absolute;
