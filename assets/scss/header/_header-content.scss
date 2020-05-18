@@ -2,12 +2,14 @@
   position: relative;
 
   &__container {
+    display: grid;
     @extend %container;
+    max-height: 189px;
   }
 
   &__title {
     text-align: center;
-    padding-top: 109px;
+    padding-top: 52px;
 
     @include lg-min {
       margin: 0 0 53px;
@@ -21,8 +23,7 @@
   &__buttons {
     display: flex;
     justify-content: center;
-    padding-left: 2px;
-    padding-bottom: 5px;
+    padding-right: 10px;
 
     @include sm-min {
       .btn:first-of-type {

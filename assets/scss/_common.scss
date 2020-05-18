@@ -6,16 +6,18 @@ html {
   font-size: $font-size;
   font-family: $font-main;
   letter-spacing: 0.1em;
+  overflow: hidden;
   overflow-y: scroll;
   color: $color-gray;
 }
 
+
 h1 {
   font-family: $font-header;
   font-weight: 300;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.078em;
   line-height: 1.2em;
-  padding-right: 4px;
+  padding-right: 11px;
 
   @include lg-min {
     font-size: 3.75rem;
@@ -58,6 +60,7 @@ h3 {
   letter-spacing: 0.05em;
   font-size: 1.125rem;
   color: $color-gray;
+  padding-right: 10px;
 }
 
 a {
@@ -99,8 +102,9 @@ a {
   border: 2px solid $color-primary;
   min-width: 350px;
   height: 60px;
-  padding: 18px $gap;
+  padding: 18px $gap 19px $gap;
   font-size: 1.125rem;
+  margin-right: 13px;
 
   @extend %btn-common;
 
