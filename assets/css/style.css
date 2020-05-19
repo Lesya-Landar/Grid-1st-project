@@ -463,7 +463,7 @@ template {
 /* sm */
 /* xs */
 /* xx */
-.btn, .btn-accent {
+.btn-accent, .btn {
   display: block;
   text-align: center;
   -webkit-transition: background-color 0.5s;
@@ -472,7 +472,7 @@ template {
   letter-spacing: 0.1em;
 }
 
-.btn:hover, .btn-accent:hover {
+.btn-accent:hover, .btn:hover {
   background-color: #d66926;
 }
 
@@ -529,11 +529,6 @@ a {
   cursor: pointer;
 }
 
-.btn {
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 2px solid #ffffff;
-}
-
 .btn-accent {
   background-color: rgba(45, 54, 81, 0.8);
   border: 2px solid #2d3651;
@@ -546,14 +541,14 @@ a {
 
 .header {
   position: relative;
-  min-height: 111.5vh;
-  padding-bottom: 100px;
+  min-height: 100vh;
+  padding: 100px 0;
   display: grid;
   -ms-flex-line-pack: center;
       align-content: center;
   color: #ffffff;
   background-color: #2d3651;
-  background-position: 87% 50%;
+  background-position: 87% 0%;
 }
 
 .header-content {
@@ -562,12 +557,10 @@ a {
 
 .header-content__container {
   display: grid;
-  max-height: 189px;
 }
 
 .header-content__title {
   text-align: center;
-  padding-top: 52px;
 }
 
 .header-content__buttons {
@@ -577,7 +570,13 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-right: 10px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.btn {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid #ffffff;
 }
 
 .header-logo {
@@ -589,8 +588,8 @@ a {
 }
 
 .header-logo__link {
-  padding: 20px 20px 20px 0px;
   display: block;
+  padding: 20px 20px 20px 0px;
 }
 
 .header-logo__accent {
@@ -785,23 +784,34 @@ a {
   grid-gap: 20px;
 }
 
-.form-item-email input {
-  padding-left: 26px;
+.btn-accent {
+  width: 100%;
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0);
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-accent:hover {
+  cursor: pointer;
+  border-color: #ffffff;
+  background-color: #d66926;
 }
 
 .form-item__input {
+  display: block;
   height: 60px;
   width: 100%;
-  padding: 5px 30px 0px 20px;
-  color: #4d6d88;
-  background-color: rgba(255, 255, 255, 0.05);
-  letter-spacing: 0.1em;
-  border: 2px solid rgba(255, 255, 255, 0);
-  border-bottom-color: rgba(255, 255, 255, 0.25);
-  font-size: 1.125rem;
+  padding: 0 30px 0 30px;
   -webkit-transition: background-color 0.5s, border-color 0.5s;
   -o-transition: background-color 0.5s, border-color 0.5s;
   transition: background-color 0.5s, border-color 0.5s;
+  font-size: 1.125rem;
+  letter-spacing: 0.1em;
+  border: 2px solid rgba(255, 255, 255, 0);
+  border-bottom-color: rgba(255, 255, 255, 0.25);
+  color: #4d6d88;
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .form-item__input::-webkit-input-placeholder {
@@ -824,47 +834,31 @@ a {
   color: #637588;
 }
 
-.form-item__input:hover {
+.form-item__input:hover, .form-item__input:focus {
   border-color: rgba(255, 255, 255, 0.15);
   border-bottom-color: #ffffff;
   background-color: rgba(255, 255, 255, 0.15);
-}
-
-.form-item__input:hover::-webkit-input-placeholder {
-  color: #8c9bab;
-}
-
-.form-item__input:hover::-moz-placeholder {
-  color: #8c9bab;
-}
-
-.form-item__input:hover:-ms-input-placeholder {
-  color: #8c9bab;
-}
-
-.form-item__input:hover::-ms-input-placeholder {
-  color: #8c9bab;
-}
-
-.form-item__input:hover::placeholder {
-  color: #8c9bab;
-}
-
-.form-item__input:focus {
   color: #ffffff;
 }
 
-.form .btn-accent {
-  color: #ffffff;
-  border: 2px solid rgba(255, 255, 255, 0);
-  border-bottom-color: rgba(255, 255, 255, 0.2);
-  background-color: rgba(255, 255, 255, 0.1);
+.form-item__input:hover::-webkit-input-placeholder, .form-item__input:focus::-webkit-input-placeholder {
+  color: #8c9bab;
 }
 
-.form .btn-accent:hover {
-  cursor: pointer;
-  border-color: #ffffff;
-  background-color: #d66926;
+.form-item__input:hover::-moz-placeholder, .form-item__input:focus::-moz-placeholder {
+  color: #8c9bab;
+}
+
+.form-item__input:hover:-ms-input-placeholder, .form-item__input:focus:-ms-input-placeholder {
+  color: #8c9bab;
+}
+
+.form-item__input:hover::-ms-input-placeholder, .form-item__input:focus::-ms-input-placeholder {
+  color: #8c9bab;
+}
+
+.form-item__input:hover::placeholder, .form-item__input:focus::placeholder {
+  color: #8c9bab;
 }
 
 .posts {
@@ -1234,14 +1228,17 @@ a {
   h1 {
     font-size: 3.75rem;
   }
+  .header-content__title {
+    margin: 0 0 53px;
+  }
   .btn {
     min-width: 250px;
     font-size: 1.125rem;
     height: 60px;
     padding: 18px 20px;
   }
-  .header-content__title {
-    margin: 0 0 53px;
+  .btn:not(:last-of-type) {
+    margin-right: 20px;
   }
   .form__btn-container {
     grid-template-columns: repeat(3, 1fr);
@@ -1273,8 +1270,12 @@ a {
   .btn {
     min-width: 200px;
     font-size: 1rem;
+    letter-spacing: 0.1em;
     height: 50px;
     padding: 14px 20px;
+  }
+  .btn:not(:last-of-type) {
+    margin-right: 20px;
   }
   .form__btn-container {
     grid-template-columns: repeat(3, 1fr);
@@ -1300,8 +1301,13 @@ a {
   .btn {
     min-width: 170px;
     font-size: 1rem;
+    letter-spacing: 0.05em;
     height: 40px;
-    padding: 9px 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .btn:not(:last-of-type) {
+    margin-right: 20px;
   }
   .header-menu {
     background-color: #2d3651;
@@ -1326,9 +1332,8 @@ a {
   .form__btn-container {
     grid-template-columns: 1fr 1fr;
   }
-  .form-item-name {
+  .form-item:nth-of-type(1) {
     grid-column: 1 / span 2;
-    grid-gap: 20px;
   }
   .posts__grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1364,6 +1369,17 @@ a {
             align-items: center;
   }
   .header-content__buttons .btn:not(:last-of-type) {
+    margin-bottom: 20px;
+  }
+  .btn {
+    min-width: 170px;
+    height: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    letter-spacing: 0.05em;
+    font-size: 1rem;
+  }
+  .btn:not(:last-of-type) {
     margin-bottom: 20px;
   }
   .about__container {

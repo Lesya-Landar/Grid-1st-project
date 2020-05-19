@@ -5,8 +5,9 @@
   margin-left: -6px;
 
   &__link {
-    padding: $gap $gap $gap 0px;
     display: block;
+    padding: $gap $gap $gap 0px;
+    
   }
 
   &__accent {

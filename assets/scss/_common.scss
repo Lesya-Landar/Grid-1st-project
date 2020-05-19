@@ -69,34 +69,6 @@ a {
   cursor: pointer;
 }
 
-.btn {
-  background-color: rgba($color-light, 0.1);
-  border: 2px solid $color-light;
-
-  @extend %btn-common;
-
-  @include lg-min {
-    min-width: 250px;
-    font-size: 1.125rem;
-    height: 60px;
-    padding: 18px $gap;
-  }
-
-  @include lg-md {
-    min-width: 200px;
-    font-size: 1rem;
-    height: 50px;
-    padding: 14px $gap;
-  }
-
-  @include md {
-    min-width: 170px;
-    font-size: 1rem;
-    height: 40px;
-    padding: 9px $gap;
-  }
-}
-
 .btn-accent {
   background-color: rgba($color-primary, 0.8);
   border: 2px solid $color-primary;
