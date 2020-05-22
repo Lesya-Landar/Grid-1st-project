@@ -3,6 +3,11 @@
   text-align: center;
   transition: background-color 0.5s;
   letter-spacing: 0.1em;
+  height: 60px;
+  padding: 18px $gap;
+  font-size: 1.125rem;
+  border-width: 2px;
+  border-style: solid;
 
   &:hover {
     background-color: $color-accent;

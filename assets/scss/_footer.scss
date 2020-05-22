@@ -10,11 +10,10 @@
 }
 
 .footer__social {
-    padding: 46px $gap 0 $gap;
+    padding: 49px $gap 0 $gap;
     font-size: 2.17rem;
     letter-spacing: 0.01em;
-    margin-bottom: 58px;
-    margin-right: 15px;
+    margin-bottom: 56px;
     position: relative;
 
     &::after {
@@ -38,14 +37,16 @@
 }
 
 .footer__content {
-    letter-spacing: 0.28em;
-    line-height: 1.2em;
-    margin-right: 8px;
+    letter-spacing: 0.29em;
+    line-height: 1.3em;
+
+    &__first {
+    padding-left: $gap / 4;
+    }
 
     &__second {
         font-weight: bold;
         color: $color-light;
         letter-spacing: 0.05em;
-        margin-right: 2.5px;
     }
 }

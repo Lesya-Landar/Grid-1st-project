@@ -17,7 +17,6 @@ h1 {
   font-weight: 300;
   letter-spacing: 0.078em;
   line-height: 1.2em;
-  padding-right: 11px;
 
   @include lg-min {
     font-size: 3.75rem;
@@ -70,41 +69,21 @@ a {
 }
 
 .btn {
+  border: 2px solid #ffffff;
+  border-color: $color-light;
   background-color: rgba($color-light, 0.1);
-  border: 2px solid $color-light;
-
   @extend %btn-common;
-
-  @include lg-min {
-    min-width: 250px;
-    font-size: 1.125rem;
-    height: 60px;
-    padding: 18px $gap;
-  }
-
-  @include lg-md {
-    min-width: 200px;
-    font-size: 1rem;
-    height: 50px;
-    padding: 14px $gap;
-  }
-
-  @include md {
-    min-width: 170px;
-    font-size: 1rem;
-    height: 40px;
-    padding: 9px $gap;
-  }
 }
 
 .btn-accent {
   background-color: rgba($color-primary, 0.8);
+  border-color: $color-light;
   border: 2px solid $color-primary;
   min-width: 350px;
   height: 60px;
   padding: 18px $gap 19px $gap;
   font-size: 1.125rem;
-  margin-right: 13px;
+  
 
   @extend %btn-common;
 
