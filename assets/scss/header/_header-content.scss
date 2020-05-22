@@ -4,12 +4,12 @@
   &__container {
     display: grid;
     @extend %container;
-    // max-height: 189px;
+    padding-left: 23px;
+    padding-top: 110px;
   }
 
   &__title {
     text-align: center;
-    // padding-top: 52px;
 
     @include lg-min {
       margin: 0 0 53px;
@@ -26,35 +26,35 @@
     flex-wrap: wrap;
     // padding-right: 10px;
 
-    @include sm-min {
-      .btn:first-of-type {
-        margin-right: $gap;
-      }
-    }
+    // @include sm-min {
+    //   .btn:first-of-type {
+    //     margin-right: $gap;
+    //   }
+    // }
 
     @include sm {
       flex-direction: column;
       align-items: center;
 
-      .btn:not(:last-of-type) {
-        margin-bottom: $gap;
-      }
-    }
+    //   .btn:not(:last-of-type) {
+    //     margin-bottom: $gap;
+    //   }
+    // }
   }
 }
 
 
 .btn {
-  background-color: rgba($color-light, 0.1);
-  border: 2px solid $color-light;
+  // background-color: rgba($color-light, 0.1);
+  // border: 2px solid $color-light;
 
-  @extend %btn-common;
+  // @extend %btn-common;
 
   @include lg-min {
     min-width: 250px;
-    font-size: 1.125rem;
-    height: 60px;
-    padding: 18px $gap;
+    // font-size: 1.125rem;
+    // height: 60px;
+    // padding: 18px $gap;
 
     &:not(:last-of-type) {
       margin-right: $gap;
@@ -67,7 +67,7 @@
     font-size: 1rem;
     letter-spacing: 0.1em;
     height: 50px;
-    padding: 14px $gap;
+    padding: 14px 14px;
 
     &:not(:last-of-type) {
       margin-right: $gap;
@@ -97,6 +97,8 @@
 
     &:not(:last-of-type) {
       margin-bottom: $gap;
+      margin-right: 0;
     }
   }
+}
 }

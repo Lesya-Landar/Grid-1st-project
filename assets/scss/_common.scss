@@ -17,7 +17,6 @@ h1 {
   font-weight: 300;
   letter-spacing: 0.078em;
   line-height: 1.2em;
-  padding-right: 11px;
 
   @include lg-min {
     font-size: 3.75rem;
@@ -69,14 +68,22 @@ a {
   cursor: pointer;
 }
 
+.btn {
+  border: 2px solid #ffffff;
+  border-color: $color-light;
+  background-color: rgba($color-light, 0.1);
+  @extend %btn-common;
+}
+
 .btn-accent {
   background-color: rgba($color-primary, 0.8);
+  border-color: $color-light;
   border: 2px solid $color-primary;
   min-width: 350px;
   height: 60px;
   padding: 18px $gap 19px $gap;
   font-size: 1.125rem;
-  margin-right: 13px;
+  
 
   @extend %btn-common;
 

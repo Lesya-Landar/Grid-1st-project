@@ -2,10 +2,10 @@
   display: grid;
   align-items: center;
   justify-items: end;
-  margin-right: -15px;
 
   &__list {
     @include unlist(0 0 (-$gap) 0);
+    margin-right: -21px;
 
     @include md-min {
       display: grid;
