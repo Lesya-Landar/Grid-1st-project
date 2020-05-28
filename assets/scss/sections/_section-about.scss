@@ -1,15 +1,16 @@
 .about {
     background-color: $color-gray-light;
-    padding: 100px 0px 50px 0px;
+    padding: 100px 0px 100px 0px;
     letter-spacing: 0.055em;
-    min-height: 652px;
+    min-height: 699px;
 }
 
 .about__container {
     max-width: 1340px;
+    max-height: 499px;
     margin: auto;
-    padding-right: 25px;
-    padding-left: 21px;
+    padding-right: 20px;
+    padding-left: 20px;
     display: grid;
     grid-template-columns: 1fr 270px;
     grid-gap: 100px;
@@ -25,15 +26,14 @@
     }
 }
 
-.about__content {
-    margin-right: -12px;
-}
+// .about__content {
+//     margin-right: -12px;
+// }
 .about__content p {
-    display: block;
     font-family: $font-main;
     font-size: 1.125rem;
     color: $color-gray;
-    line-height: 1.3em;
+    line-height: 1.15em;
     margin-bottom: 1.05em;
 
     @include md {
@@ -49,16 +49,15 @@
 
 .about__content p:first-of-type::after {
     position: absolute;
-    display: block;
     width: 2px;
-    top: -2px;
+    top: 0;
     height: 200px;
     right: -50px;
     content: "";
     background-color: #d8dadc;
 }
 
-.about__img {
-    margin-top: -3px;
-    margin-left: 4px;
-}
+// .about__img {
+//     margin-top: -3px;
+//     margin-left: 4px;
+// }
