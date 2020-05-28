@@ -58,9 +58,9 @@
 
 .posts-item__link {
   display: grid;
-  min-height: 538px;
+  height: 100%;
   grid-template-rows: 300px 1fr;
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 .posts-item__content {
@@ -103,8 +103,7 @@
   max-height: 550px;
   transition: background-color 0.5s;
   background-color: #f2f2f2;
-  overflow: hidden;
-  overflow-y: auto;
+ 
 
   &:hover {
     background-color: #d8d8d8;
