@@ -1,39 +1,70 @@
 .about {
-    display: block;
+    // display: block;
     background-color: $color-gray-light;
-    padding: 100px 0px 100px 0px;
+    
     letter-spacing: 0.055em;
-    min-height: 699px;
+    @extend %section;
+
+    &__image {
+      display: grid;
+      align-content: center;
+      justify-items: center;
+  
+      img {
+        max-width: 100%;
+        max-height: 480px;
+      }
+    }
 
 }
 
 .about__container {
-    max-width: 1340px;
-    margin: auto;
-    padding-right: 20px;
-    padding-left: 20px;
+    
     display: grid;
-    grid-template-columns: 1fr 270px;
-    grid-gap: 100px;
+    // grid-template-columns: 1fr 270px;
+    // grid-gap: 100px;
+    @extend %container;
+
+
+    @include lg-min {
+      grid-gap: $gap * 5;
+      grid-template-columns: 1fr 271px;
+    }
+
+    @include lg-md {
+      grid-gap: $gap * 2;
+      grid-template-columns: 1fr 271px;
+    }
+
+  
+
+    
+      @media (max-width: $md) and (min-width: $sm) {
+      grid-gap: $gap;
+      grid-template-columns: 1fr 236px;
+      }
+    
 
     @include sm {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-
-        p {
-            text-align: left;
-        }
+      grid-gap: $gap;
+      grid-template-columns: 1fr;
     }
-}
+  }
 
-.about__content p {
-    display: block;
-    font-family: $font-main;
-    font-size: 1.125rem;
-    color: $color-gray;
-    line-height: 1.15em;
-    margin-bottom: 1.05em;
+
+.about__content {
+  
+  p {
+    @include lg-min {
+      font-size: 1.125rem;
+    }
+  
+    // display: block;
+    // font-family: $font-main;
+    
+    // color: $color-gray;
+    // line-height: 1.15em;
+    // margin-bottom: 1.05em;
 
     @include md {
         font-size: 1rem;
@@ -41,22 +72,45 @@
 
     &:first-of-type {
         position: relative;
-        display: block;
+        // display: block;
         margin-top: -5px;
     }
+  }
 }
 
-.about__content p:first-of-type::after {
+.about__content p {
+&:first-of-type::after {
     position: absolute;
     width: 2px;
     top: 0;
     height: 200px;
-    right: -50px;
+    right: -10px;
     content: "";
     background-color: #d8dadc;
+
+    @include lg-min {
+        right: -$gap * 2.5;
+      }
+      @include lg-md {
+        right: -$gap;
+      }
+      // @include md-sm {
+      //   right: -$gap / 2;
+      // }
+      // @mixin md-sm {
+      //   @media (max-width: $md) and (min-width: $sm) {
+      //     right: -$gap / 2;
+      //   }
+      // }
+
+      @include sm {
+        display: none;
+      }
+      
+    }
+      &:last-of-type {
+        margin: 0;
+      }
 }
 
-// .about__img {
-//     margin-top: -3px;
-//     margin-left: 4px;
-// }
+

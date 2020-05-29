@@ -6,7 +6,7 @@
   left: 0;
 
   @include md {
-    background-color: $color-primary;
+    background-color: rgba(68, 89, 110, 0.25);
   }
 
   &__container {

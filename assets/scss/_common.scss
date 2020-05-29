@@ -44,10 +44,12 @@ h2 {
 
   @include lg-md {
     font-size: 2rem;
+    margin-bottom: 42px;
   }
 
   @include md {
     font-size: 1.5rem;
+    margin-bottom: 36px;
   }
 
   @include sm {
@@ -78,7 +80,6 @@ a {
   background-color: rgba($color-primary, 0.8);
   border-color: $color-light;
   border: 2px solid $color-primary;
-  min-width: 350px;
   height: 60px;
   padding: 18px $gap 18px $gap;
   font-size: 1.125rem;
@@ -86,10 +87,7 @@ a {
 
   @extend %btn-common;
 
-  @include sm-min {
-    min-width: 350px;
-  }
-
+  
   @include sm {
     width: 100%;
   }
