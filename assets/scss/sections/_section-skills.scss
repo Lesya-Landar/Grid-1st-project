@@ -1,4 +1,9 @@
 .skills {
+  @mixin md-sm {
+    @media (max-width:$md) and (min-width: $sm) {
+      @content;
+    }
+  }
     @include sm-min {
   padding: ($gap / 2) ($gap / 2) ($gap * 2) ($gap / 2);
   }
@@ -63,6 +68,11 @@
   &__button {
     display: flex;
     justify-content: center;
+
+    a {
+      min-width: 350px;
+    }
+    
   }
 }
 

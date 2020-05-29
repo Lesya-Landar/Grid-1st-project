@@ -24,23 +24,28 @@
         grid-template-columns: repeat(3, 1fr);
     }
 
-    @include md-sm {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    @include sm {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-
-        input {
-            margin-bottom: $gap;
+   
+    
+        @media (max-width:$md) and (min-width: $sm) {
+            grid-template-columns: 1fr 1fr;
         }
+      
+    // @include md-sm {
+    //     grid-template-columns: 1fr 1fr;
+    // }
+
+    // // @include sm {
+    // //     display: flex;
+    // //     flex-direction: column;
+    // //     text-align: center;
+
+    //     input {
+    //         margin-bottom: $gap;
+    //     }
     }
-}
+
 
     button.btn-accent  {
-    width: 100%;
     color: $color-light;
     border: 2px solid rgba(255, 255, 255, 0);
     border-bottom-color: rgba(255, 255, 255, 0.2);
@@ -60,7 +65,7 @@
         padding: 0 ($gap * 1.5) 0 ($gap * 1.5);
         transition: background-color 0.5s, border-color 0.5s;
         font-size: 1.125rem;
-        letter-spacing: 0.1em;
+        letter-spacing: 0.15em;
         border: 2px solid rgba(255, 255, 255, 0);
         border-bottom-color: rgba(255, 255, 255, 0.25);
         color: $color-light;
@@ -85,7 +90,9 @@
     }
 
     &:nth-of-type(1) {
-        @include md-sm {
+        @media (max-width:$md) and (min-width: $sm)
+        {
+        // @include md-sm { 
             grid-column: 1 / span 2;
         }
     }
